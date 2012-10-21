@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="GDPtoHTML.xsl" type="text/xsl"?>
+
+<JCProject> 
+  <!-- This section will defined the specific smart card type -->  
+  <Card Name="Sim Card R5"/>  
+  <!-- This section will defined the output file paths of the Project -->  
+  <Path ClassDir="./classes" ConversionDir="./oncard"/>  
+  <Version Major="2" Minor="0"/>  
+  <!-- This section will defined all the properties of the Application loaded on the smart card -->  
+  <Application Name="otp" Label="This is a Gemplus example"> 
+    <!-- You can customize the properties of this Package or add another here -->  
+    <Package Name="com.ng.otp" Aid="A0000000185000000000000052414450" DapAlgoName="" DapSecretKey="" EepromSize="0000" FileSize="0000" LoadToken="" RamSize="0000" SecurityDomainAid=""/>  
+    <Applet ClassName="otp" Aid="A0000000185000000000000052414441" Index="1"> 
+      <!--If you add another Applet, you should increase his Index number-->  
+      <Instance Aid="A0000000185000000000000052414441" Index="1" ApplicationSpecificParameters="" EepromSize="0000" RamSize="0000" InstallToken="" Privilege="00"> 
+        <!--If you add another Instance, you should increase his Index number-->  
+        <GSMParameter TextMaxLength="20" MaxNumberOfMenuEntries="02" PriorityLevel="FF" TimerMaxNumber="00" Menus="00010002"> 
+          <!--You can customize the GSM parameters of this Instance here--> 
+        </GSMParameter>  
+        <SIMAccessParameter AccessDomainParameter="00" AccessDomainData=""> 
+          <!--You can customize the SIM Access parameters of this Instance here--> 
+        </SIMAccessParameter> 
+      </Instance> 
+    </Applet> 
+  </Application> 
+</JCProject>

@@ -1,0 +1,59 @@
+# name of the protocol profile within the repository
+Name=GemXplore Xpresso V3.3_protocol
+
+# name of the protocol formatter type
+Type=03.48
+
+# maximum length of the user data part of a message
+TPUD.MaxLength=140
+
+# concatenation support declaration
+IsConcatenationAvailable=true
+
+# concatenation information element tag value
+ConcatenationIEIa=0x00
+
+# formatter for CPL header element
+CPL.Formatter=com.gemplus.tpudlib.internal.On2BytesFormatter
+
+# CHI value
+CHI.Value=
+
+# CHI expected length while unformatting
+CHI.Expected.Length=0
+
+# formatter for CHL header element
+CHL.Formatter=com.gemplus.tpudlib.internal.On1BytesFormatter
+
+# max value of the command packet CNTR
+CP.SynchCounter.Max=1099511627775
+
+# formatter for the command packet CNTR header element
+CP.SynchCounter.Formatter=com.gemplus.tpudlib.internal.On5BytesFormatter
+
+# command packet data extractor for RCCCDS computation
+CommandDataToSign.Agent=com.gemplus.tpudlib.internal.gsm0348.header.CplChlRCCCDSForCp
+
+# formatter for RPL header element
+RPL.Formatter=com.gemplus.tpudlib.internal.On2BytesFormatter
+
+# RHI value
+RHI.Value=
+
+# RHI expected length while unformatting
+RHI.Expected.Length=0
+
+# formatter for RHL header element
+RHL.Formatter=com.gemplus.tpudlib.internal.On1BytesFormatter
+
+# max value of the response packet CNTR
+RP.SynchCounter.Max=1099511627775
+
+# formatter for the response packet CNTR header element
+RP.SynchCounter.Formatter=com.gemplus.tpudlib.internal.On5BytesFormatter
+
+# response packet data extractor for RCCCDS computation
+ResponseDataToSign.Agent=com.gemplus.tpudlib.internal.gsm0348.header.UdhlRCCCDSForRp
+
+# cipher data padder
+DataToCipher.Padder=com.gemplus.tpudlib.internal.algorithm.DataPadderImpl

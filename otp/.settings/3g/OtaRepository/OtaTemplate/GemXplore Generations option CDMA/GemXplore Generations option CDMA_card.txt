@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=GemXplore Generations option CDMA
+
+# name of the protocol profile associated to the card
+Protocol=GemXplore Generations option CDMA_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=GemXplore Generations option CDMA_algorithm
+
+#name of the command set associated to the card
+Command.Set=GxxV3

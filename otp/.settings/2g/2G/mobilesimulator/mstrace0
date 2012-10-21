@@ -1,0 +1,6 @@
+TRACE
+Class: class mobilesimulator4.a34 - Method: openXmlGuiConfigDocument - Comment: try to find the file, result : KO !
+TRACE
+Class: class mobilesimulator14.a147 - Method: run - Comment: killed
+TRACE
+Class: class mobilesimulator13.a116 - Method: run - Comment: killed

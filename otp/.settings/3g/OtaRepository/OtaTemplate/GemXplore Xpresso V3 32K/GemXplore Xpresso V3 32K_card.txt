@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=GemXplore Xpresso V3 32K
+
+# name of the protocol profile associated to the card
+Protocol=GemXplore Xpresso V3 32K_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=GemXplore Xpresso V3 32K_algorithm
+
+#name of the command set associated to the card
+Command.Set=GxxV3

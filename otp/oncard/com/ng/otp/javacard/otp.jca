@@ -1,0 +1,1335 @@
+// converted by version 1.1
+// on Tue Mar 27 17:28:31 CEST 2012
+
+.package com/ng/otp {
+	.aid 0xA0:0x0:0x0:0x0:0x18:0x50:0x0:0x0:0x0:0x0:0x0:0x0:0x52:0x41:0x44:0x50;
+	.version 2.0;
+
+	.imports {
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x1 1.0;		//javacard/framework
+		0xA0:0x0:0x0:0x0:0x9:0x0:0x3:0xFF:0xFF:0xFF:0xFF:0x89:0x10:0x71:0x0:0x2 2.6;		//sim/toolkit
+		0xA0:0x0:0x0:0x0:0x62:0x1:0x2 1.1;		//javacard/security
+		0xA0:0x0:0x0:0x0:0x62:0x0:0x1 1.0;		//java/lang
+	}
+
+	.applet {
+		0xA0:0x0:0x0:0x0:0x18:0x50:0x0:0x0:0x0:0x0:0x0:0x0:0x52:0x41:0x44:0x41 otp;
+	}
+
+	.constantPool {
+		// 0
+		instanceFieldRef short otp/KEY_LENGTH;
+		// 1
+		instanceFieldRef short otp/KEY_LENGTH_ASCII;
+		// 2
+		instanceFieldRef byte[] otp/msgEnterNewKey;
+		// 3
+		instanceFieldRef byte[] otp/msgWrongKeyLen;
+		// 4
+		instanceFieldRef byte[] otp/msgKeyNotInited;
+		// 5
+		instanceFieldRef byte[] otp/msgKeyInited;
+		// 6
+		instanceFieldRef byte[] otp/msgToolkitExp;
+		// 7
+		instanceFieldRef byte[] otp/msgArrayOutOfBoundExp;
+		// 8
+		instanceFieldRef byte[] otp/msgUnknownErr;
+		// 9
+		instanceFieldRef byte[] otp/hexNibbles;
+		// 10
+		instanceFieldRef 1.9 otp/reg;
+		// 11
+		instanceFieldRef byte[] otp/menuGetNextPasswd;
+		// 12
+		instanceFieldRef byte[] otp/menuInitKey;
+		// 13
+		instanceFieldRef byte otp/idMenuGetNextPasswd;
+		// 14
+		instanceFieldRef byte otp/idMenuInitKey;
+		// 15
+		instanceFieldRef boolean otp/isKeyInitialized;
+		// 16
+		instanceFieldRef byte[] otp/key;
+		// 17
+		instanceFieldRef byte[] otp/tmpBuf;
+		// 18
+		instanceFieldRef 2.11 otp/hash;
+		// 19
+		staticMethodRef 1.9.0()Lsim/toolkit/ToolkitRegistry;;		// sim/toolkit/ToolkitRegistry.getEntry()Lsim/toolkit/ToolkitRegistry;
+			.descriptor	Lsim/toolkit/ToolkitRegistry;	1.9;
+
+		// 20
+		staticMethodRef 0.3.0()V;		// javacard/framework/Applet.<init>()V
+		// 21
+		classRef otp;
+		// 22
+		staticMethodRef otp/<init>()V;
+		// 23
+		virtualMethodRef 0.3.2([BSB)V;		// javacard/framework/Applet.register([BSB)V
+		// 24
+		staticMethodRef 1.8.0()Lsim/toolkit/EnvelopeHandler;;		// sim/toolkit/EnvelopeHandler.getTheHandler()Lsim/toolkit/EnvelopeHandler;
+			.descriptor	Lsim/toolkit/EnvelopeHandler;	1.8;
+
+		// 25
+		virtualMethodRef 1.8.12()B;		// sim/toolkit/EnvelopeHandler.getItemIdentifier()B
+		// 26
+		staticMethodRef otp/getNextPasswd()V;
+		// 27
+		staticMethodRef otp/initKey()V;
+		// 28
+		virtualMethodRef 0.3.3()Z;		// javacard/framework/Applet.selectingApplet()Z
+		// 29
+		classRef 2.12;		// javacard/security/CryptoException
+		// 30
+		staticMethodRef 2.11.0(BZ)Ljavacard/security/MessageDigest;;		// javacard/security/MessageDigest.getInstance(BZ)Ljavacard/security/MessageDigest;
+			.descriptor	Ljavacard/security/MessageDigest;	2.11;
+
+		// 31
+		virtualMethodRef 1.9.11([BSSBZBS)B;		// sim/toolkit/ToolkitRegistry.initMenuEntry([BSSBZBS)B
+		// 32
+		virtualMethodRef 2.11.1([BSS[BS)S;		// javacard/security/MessageDigest.doFinal([BSS[BS)S
+		// 33
+		staticMethodRef 0.16.2([BS[BSS)S;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+		// 34
+		staticMethodRef otp/displayHexBuffer([BS)V;
+		// 35
+		staticMethodRef otp/displayText([B)V;
+		// 36
+		classRef 1.7;		// sim/toolkit/ToolkitException
+		// 37
+		classRef 3.5;		// java/lang/ArrayIndexOutOfBoundsException
+		// 38
+		classRef 3.2;		// java/lang/Exception
+		// 39
+		staticMethodRef 1.10.0()Lsim/toolkit/ProactiveHandler;;		// sim/toolkit/ProactiveHandler.getTheHandler()Lsim/toolkit/ProactiveHandler;
+			.descriptor	Lsim/toolkit/ProactiveHandler;	1.10;
+
+		// 40
+		staticMethodRef 1.5.0()Lsim/toolkit/ProactiveResponseHandler;;		// sim/toolkit/ProactiveResponseHandler.getTheHandler()Lsim/toolkit/ProactiveResponseHandler;
+			.descriptor	Lsim/toolkit/ProactiveResponseHandler;	1.5;
+
+		// 41
+		virtualMethodRef 1.10.18(BB[BSSSS)V;		// sim/toolkit/ProactiveHandler.initGetInput(BB[BSSSS)V
+		// 42
+		virtualMethodRef 1.10.22()B;		// sim/toolkit/ProactiveHandler.send()B
+		// 43
+		virtualMethodRef 1.5.15([BS)S;		// sim/toolkit/ProactiveResponseHandler.copyTextString([BS)S
+		// 44
+		staticMethodRef 0.16.3([BSSB)S;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+		// 45
+		virtualMethodRef 1.10.19(BB[BSS)V;		// sim/toolkit/ProactiveHandler.initDisplayText(BB[BSS)V
+	}
+
+	.class public otp 0 extends 0.3 {		// extends javacard/framework/Applet
+
+		.shareable;
+
+		.fields {
+			private 1.9 reg 0;		// Lsim/toolkit/ToolkitRegistry;
+			private byte[] menuGetNextPasswd 1;		// [B
+			private byte[] menuInitKey 2;		// [B
+			private byte[] key 3;		// [B
+			private 2.11 hash 4;		// Ljavacard/security/MessageDigest;
+			private byte[] msgEnterNewKey 5;		// [B
+			private byte[] msgWrongKeyLen 6;		// [B
+			private byte[] msgKeyNotInited 7;		// [B
+			private byte[] msgKeyInited 8;		// [B
+			private byte[] msgToolkitExp 9;		// [B
+			private byte[] msgArrayOutOfBoundExp 10;		// [B
+			private byte[] msgUnknownErr 11;		// [B
+			private byte[] tmpBuf 12;		// [B
+			private byte[] hexNibbles 13;		// [B
+			private short KEY_LENGTH 14;		// S
+			private short KEY_LENGTH_ASCII 15;		// S
+			private byte idMenuGetNextPasswd 16;		// B
+			private byte idMenuInitKey 17;		// B
+			private boolean isKeyInitialized 18;		// Z
+		}
+
+		.publicMethodTable 7 {
+			equals(Ljava/lang/Object;)Z;
+			register()V;
+			register([BSB)V;
+			selectingApplet()Z;
+			deselect()V;
+			getShareableInterfaceObject(Ljavacard/framework/AID;B)Ljavacard/framework/Shareable;;
+			select()Z;
+			process(Ljavacard/framework/APDU;)V;
+			processToolkit(B)V;
+		}
+
+		.packageMethodTable 0 {
+		}
+
+		.implementedInterfaceInfoTable { 
+			.interface 0.2 { 		// javacard/framework/Shareable
+			}
+
+			.interface 1.1 { 		// sim/toolkit/ToolkitInterface
+				8;		// processToolkit(B)V
+			}
+
+			.interface 1.0 { 		// sim/toolkit/ToolkitConstants
+			}
+
+		}
+
+		.method public <init>()V 0 {
+			.stack 9;
+			.locals 0;
+
+				L0:	aload_0;
+					invokespecial 20;		// javacard/framework/Applet.<init>()V
+					aload_0;
+					bspush 20;
+					putfield_s 0;		// short com/ng/otp/otp.KEY_LENGTH
+					aload_0;
+					getfield_s_this 0;		// short com/ng/otp/otp.KEY_LENGTH
+					sconst_2;
+					smul;
+					putfield_s 1;		// short com/ng/otp/otp.KEY_LENGTH_ASCII
+					aload_0;
+					bspush 14;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 69;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 116;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 101;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 114;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 110;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 119;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 107;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 121;
+					bastore;
+					dup;
+					bspush 13;
+					bspush 58;
+					bastore;
+					putfield_a 2;		// reference com/ng/otp/otp.msgEnterNewKey
+					aload_0;
+					bspush 40;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 73;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 99;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 111;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 114;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 99;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 107;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 121;
+					bastore;
+					dup;
+					bspush 13;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 14;
+					bspush 108;
+					bastore;
+					dup;
+					bspush 15;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 16;
+					bspush 110;
+					bastore;
+					dup;
+					bspush 17;
+					bspush 103;
+					bastore;
+					dup;
+					bspush 18;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 19;
+					bspush 104;
+					bastore;
+					dup;
+					bspush 20;
+					bspush 46;
+					bastore;
+					dup;
+					bspush 21;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 22;
+					bspush 69;
+					bastore;
+					dup;
+					bspush 23;
+					bspush 120;
+					bastore;
+					dup;
+					bspush 24;
+					bspush 112;
+					bastore;
+					dup;
+					bspush 25;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 26;
+					bspush 99;
+					bastore;
+					dup;
+					bspush 27;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 28;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 29;
+					bspush 100;
+					bastore;
+					dup;
+					bspush 30;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 31;
+					bspush 49;
+					bastore;
+					dup;
+					bspush 32;
+					bspush 54;
+					bastore;
+					dup;
+					bspush 33;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 34;
+					bspush 98;
+					bastore;
+					dup;
+					bspush 35;
+					bspush 121;
+					bastore;
+					dup;
+					bspush 36;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 37;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 38;
+					bspush 115;
+					bastore;
+					dup;
+					bspush 39;
+					bspush 115;
+					bastore;
+					putfield_a 3;		// reference com/ng/otp/otp.msgWrongKeyLen
+					aload_0;
+					bspush 19;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 75;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 101;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 121;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 32;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 110;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 13;
+					bspush 97;
+					bastore;
+					dup;
+					bspush 14;
+					bspush 108;
+					bastore;
+					dup;
+					bspush 15;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 16;
+					bspush 122;
+					bastore;
+					dup;
+					bspush 17;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 18;
+					bspush 100;
+					bastore;
+					putfield_a 4;		// reference com/ng/otp/otp.msgKeyNotInited
+					aload_0;
+					bspush 19;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 78;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 101;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 119;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 32;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 107;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 121;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 110;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 13;
+					bspush 97;
+					bastore;
+					dup;
+					bspush 14;
+					bspush 108;
+					bastore;
+					dup;
+					bspush 15;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 16;
+					bspush 122;
+					bastore;
+					dup;
+					bspush 17;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 18;
+					bspush 100;
+					bastore;
+					putfield_a 5;		// reference com/ng/otp/otp.msgKeyInited
+					aload_0;
+					bspush 13;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 84;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 111;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 111;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 108;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 107;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 105;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 114;
+					bastore;
+					putfield_a 6;		// reference com/ng/otp/otp.msgToolkitExp
+					aload_0;
+					bspush 13;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 65;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 114;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 114;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 32;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 79;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 66;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 114;
+					bastore;
+					putfield_a 7;		// reference com/ng/otp/otp.msgArrayOutOfBoundExp
+					aload_0;
+					bspush 13;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 85;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 107;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 111;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 119;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 110;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 114;
+					bastore;
+					putfield_a 8;		// reference com/ng/otp/otp.msgUnknownErr
+					aload_0;
+					bspush 7;
+					newarray 11;
+					dup;
+					sconst_1;
+					bspush 10;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 11;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 12;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 13;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 14;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 15;
+					bastore;
+					putfield_a 9;		// reference com/ng/otp/otp.hexNibbles
+					aload_0;
+					invokestatic 19;		// sim/toolkit/ToolkitRegistry.getEntry()Lsim/toolkit/ToolkitRegistry;
+					putfield_a 10;		// reference com/ng/otp/otp.reg
+					aload_0;
+					bspush 17;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 71;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 101;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 116;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 32;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 120;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 116;
+					bastore;
+					dup;
+					bspush 8;
+					bspush 32;
+					bastore;
+					dup;
+					bspush 9;
+					bspush 112;
+					bastore;
+					dup;
+					bspush 10;
+					bspush 97;
+					bastore;
+					dup;
+					bspush 11;
+					bspush 115;
+					bastore;
+					dup;
+					bspush 12;
+					bspush 115;
+					bastore;
+					dup;
+					bspush 13;
+					bspush 119;
+					bastore;
+					dup;
+					bspush 14;
+					bspush 111;
+					bastore;
+					dup;
+					bspush 15;
+					bspush 114;
+					bastore;
+					dup;
+					bspush 16;
+					bspush 100;
+					bastore;
+					putfield_a 11;		// reference com/ng/otp/otp.menuGetNextPasswd
+					aload_0;
+					bspush 8;
+					newarray 11;
+					dup;
+					sconst_0;
+					bspush 73;
+					bastore;
+					dup;
+					sconst_1;
+					bspush 110;
+					bastore;
+					dup;
+					sconst_2;
+					bspush 105;
+					bastore;
+					dup;
+					sconst_3;
+					bspush 116;
+					bastore;
+					dup;
+					sconst_4;
+					bspush 32;
+					bastore;
+					dup;
+					sconst_5;
+					bspush 107;
+					bastore;
+					dup;
+					bspush 6;
+					bspush 101;
+					bastore;
+					dup;
+					bspush 7;
+					bspush 121;
+					bastore;
+					putfield_a 12;		// reference com/ng/otp/otp.menuInitKey
+					aload_0;
+					getfield_a_this 10;		// reference com/ng/otp/otp.reg
+					getfield_a_this 11;		// reference com/ng/otp/otp.menuGetNextPasswd
+					sconst_0;
+					getfield_a_this 11;		// reference com/ng/otp/otp.menuGetNextPasswd
+					arraylength;
+					bspush 36;
+					sconst_0;
+					sconst_0;
+					sconst_0;
+					invokevirtual 31;		// sim/toolkit/ToolkitRegistry.initMenuEntry([BSSBZBS)B
+					putfield_b 13;		// byte com/ng/otp/otp.idMenuGetNextPasswd
+					aload_0;
+					getfield_a_this 10;		// reference com/ng/otp/otp.reg
+					getfield_a_this 12;		// reference com/ng/otp/otp.menuInitKey
+					sconst_0;
+					getfield_a_this 12;		// reference com/ng/otp/otp.menuInitKey
+					arraylength;
+					sconst_0;
+					sconst_0;
+					sconst_0;
+					sconst_0;
+					invokevirtual 31;		// sim/toolkit/ToolkitRegistry.initMenuEntry([BSSBZBS)B
+					putfield_b 14;		// byte com/ng/otp/otp.idMenuInitKey
+					aload_0;
+					sconst_0;
+					putfield_b 15;		// boolean com/ng/otp/otp.isKeyInitialized
+					aload_0;
+					getfield_s_this 0;		// short com/ng/otp/otp.KEY_LENGTH
+					newarray 11;
+					putfield_a 16;		// reference com/ng/otp/otp.key
+					aload_0;
+					getfield_s_this 1;		// short com/ng/otp/otp.KEY_LENGTH_ASCII
+					newarray 11;
+					putfield_a 17;		// reference com/ng/otp/otp.tmpBuf
+					return;
+		}
+
+		.method public static install([BSB)V 1 {
+			.stack 5;
+			.locals 1;
+
+				L0:	new 21;		// com/ng/otp/otp
+					dup;
+					invokespecial 22;		// com/ng/otp/otp.<init>()V
+					astore_3;
+					aload_3;
+					aload_0;
+					sload_1;
+					sconst_1;
+					sadd;
+					aload_0;
+					sload_1;
+					baload;
+					invokevirtual 23;		// javacard/framework/Applet.register([BSB)V
+					return;
+		}
+
+		.method public processToolkit(B)V 8 {
+			.stack 2;
+			.locals 2;
+
+				L0:	invokestatic 24;		// sim/toolkit/EnvelopeHandler.getTheHandler()Lsim/toolkit/EnvelopeHandler;
+					astore_2;
+					sload_1;
+					bspush 7;
+					if_scmpne L5;
+				L1:	aload_2;
+					invokevirtual 25;		// sim/toolkit/EnvelopeHandler.getItemIdentifier()B
+					sstore_3;
+					sload_3;
+					getfield_b_this 13;		// byte com/ng/otp/otp.idMenuGetNextPasswd
+					if_scmpne L3;
+				L2:	aload_0;
+					invokespecial 26;		// com/ng/otp/otp.getNextPasswd()V
+				L3:	sload_3;
+					getfield_b_this 14;		// byte com/ng/otp/otp.idMenuInitKey
+					if_scmpne L5;
+				L4:	aload_0;
+					invokespecial 27;		// com/ng/otp/otp.initKey()V
+				L5:	return;
+		}
+
+		.method public process(Ljavacard/framework/APDU;)V 7 {
+			.stack 1;
+			.locals 0;
+
+			.descriptor	Ljavacard/framework/APDU;	0.10;
+
+				L0:	aload_0;
+					invokevirtual 28;		// javacard/framework/Applet.selectingApplet()Z
+					ifeq L2;
+				L1:	return;
+				L2:	return;
+		}
+
+		.method private getNextPasswd()V {
+			.stack 6;
+			.locals 1;
+
+				L0:	getfield_b_this 15;		// boolean com/ng/otp/otp.isKeyInitialized
+					ifeq L4;
+				L1:	aload_0;
+					sconst_1;
+					sconst_1;
+					invokestatic 30;		// javacard/security/MessageDigest.getInstance(BZ)Ljavacard/security/MessageDigest;
+					putfield_a 18;		// reference com/ng/otp/otp.hash
+					getfield_a_this 18;		// reference com/ng/otp/otp.hash
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					sconst_0;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					arraylength;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sconst_0;
+					invokevirtual 32;		// javacard/security/MessageDigest.doFinal([BSS[BS)S
+					pop;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sconst_0;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					sconst_0;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					arraylength;
+					invokestatic 33;		// javacard/framework/Util.arrayCopyNonAtomic([BS[BSS)S
+					pop;
+					aload_0;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					arraylength;
+					invokespecial 34;		// com/ng/otp/otp.displayHexBuffer([BS)V
+				L2:	goto L5;
+				L3:	astore_1;
+					goto L5;
+				L4:	aload_0;
+					getfield_a_this 4;		// reference com/ng/otp/otp.msgKeyNotInited
+					invokespecial 35;		// com/ng/otp/otp.displayText([B)V
+				L5:	return;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L1 L2 L3 29;
+			}
+		}
+
+		.method private initKey()V {
+			.stack 8;
+			.locals 6;
+
+				L0:	invokestatic 39;		// sim/toolkit/ProactiveHandler.getTheHandler()Lsim/toolkit/ProactiveHandler;
+					astore_1;
+					invokestatic 40;		// sim/toolkit/ProactiveResponseHandler.getTheHandler()Lsim/toolkit/ProactiveResponseHandler;
+					astore_2;
+					aload_1;
+					sconst_1;
+					sconst_4;
+					getfield_a_this 2;		// reference com/ng/otp/otp.msgEnterNewKey
+					sconst_0;
+					getfield_a_this 2;		// reference com/ng/otp/otp.msgEnterNewKey
+					arraylength;
+					getfield_s_this 1;		// short com/ng/otp/otp.KEY_LENGTH_ASCII
+					getfield_s_this 1;		// short com/ng/otp/otp.KEY_LENGTH_ASCII
+					invokevirtual 41;		// sim/toolkit/ProactiveHandler.initGetInput(BB[BSSSS)V
+				L1:	aload_1;
+					invokevirtual 42;		// sim/toolkit/ProactiveHandler.send()B
+					pop;
+					aload_2;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sconst_0;
+					invokevirtual 43;		// sim/toolkit/ProactiveResponseHandler.copyTextString([BS)S
+					pop;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					sconst_0;
+					getfield_a_this 16;		// reference com/ng/otp/otp.key
+					arraylength;
+					sconst_0;
+					invokestatic 44;		// javacard/framework/Util.arrayFillNonAtomic([BSSB)S
+					pop;
+					sconst_0;
+					sstore_3;
+					sconst_0;
+					sstore 4;
+					sconst_0;
+					sstore 5;
+					sconst_0;
+					sstore 6;
+					goto_w L17;
+				L2:	sload_3;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					arraylength;
+					if_scmpne L4;
+				L3:	goto_w L18;
+				L4:	sload_3;
+					sstore 4;
+					sload_3;
+					sconst_1;
+					sadd;
+					sstore 5;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 65;
+					if_scmplt L7;
+				L5:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 70;
+					if_scmpgt L7;
+				L6:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					getfield_a_this 9;		// reference com/ng/otp/otp.hexNibbles
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 64;
+					ssub;
+					baload;
+					bastore;
+				L7:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 97;
+					if_scmplt L10;
+				L8:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 102;
+					if_scmpgt L10;
+				L9:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					getfield_a_this 9;		// reference com/ng/otp/otp.hexNibbles
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 4;
+					baload;
+					bspush 96;
+					ssub;
+					baload;
+					bastore;
+				L10:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 65;
+					if_scmplt L13;
+				L11:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 70;
+					if_scmpgt L13;
+				L12:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					getfield_a_this 9;		// reference com/ng/otp/otp.hexNibbles
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 64;
+					ssub;
+					baload;
+					bastore;
+				L13:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 97;
+					if_scmplt L16;
+				L14:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 102;
+					if_scmpgt L16;
+				L15:	getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					getfield_a_this 9;		// reference com/ng/otp/otp.hexNibbles
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload 5;
+					baload;
+					bspush 96;
+					ssub;
+					baload;
+					bastore;
+				L16:	getfield_a_this 16;		// reference com/ng/otp/otp.key
+					sload 6;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload_3;
+					baload;
+					bspush 15;
+					sand;
+					sconst_4;
+					sshl;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					sload_3;
+					sconst_1;
+					sadd;
+					baload;
+					bspush 15;
+					sand;
+					sor;
+					s2b;
+					bastore;
+					sinc 3 2;
+					sinc 6 1;
+				L17:	sload 6;
+					getfield_a_this 17;		// reference com/ng/otp/otp.tmpBuf
+					arraylength;
+					if_scmplt_w L2;
+				L18:	aload_0;
+					sconst_1;
+					putfield_b 15;		// boolean com/ng/otp/otp.isKeyInitialized
+				L19:	goto L23;
+				L20:	astore_3;
+					aload_0;
+					getfield_a_this 6;		// reference com/ng/otp/otp.msgToolkitExp
+					invokespecial 35;		// com/ng/otp/otp.displayText([B)V
+					goto L23;
+				L21:	astore_3;
+					aload_0;
+					getfield_a_this 7;		// reference com/ng/otp/otp.msgArrayOutOfBoundExp
+					invokespecial 35;		// com/ng/otp/otp.displayText([B)V
+					goto L23;
+				L22:	astore_3;
+					aload_0;
+					getfield_a_this 8;		// reference com/ng/otp/otp.msgUnknownErr
+					invokespecial 35;		// com/ng/otp/otp.displayText([B)V
+				L23:	return;
+			.exceptionTable {
+				// start_block end_block handler_block catch_type_index
+				L1 L19 L20 36;
+				L1 L19 L21 37;
+				L1 L19 L22 38;
+			}
+		}
+
+		.method private displayText([B)V {
+			.stack 6;
+			.locals 1;
+
+				L0:	invokestatic 39;		// sim/toolkit/ProactiveHandler.getTheHandler()Lsim/toolkit/ProactiveHandler;
+					astore_2;
+					aload_2;
+					sconst_0;
+					sconst_4;
+					aload_1;
+					sconst_0;
+					aload_1;
+					arraylength;
+					invokevirtual 45;		// sim/toolkit/ProactiveHandler.initDisplayText(BB[BSS)V
+					aload_2;
+					invokevirtual 42;		// sim/toolkit/ProactiveHandler.send()B
+					pop;
+					return;
+		}
+
+		.method private displayHexBuffer([BS)V {
+			.stack 6;
+			.locals 6;
+
+				L0:	sload_2;
+					sconst_2;
+					smul;
+					sstore_3;
+					sload_3;
+					newarray 11;
+					astore 4;
+					sconst_0;
+					sstore 5;
+					sconst_0;
+					sstore 6;
+					sconst_0;
+					sstore 7;
+					sconst_0;
+					sstore 8;
+					goto L10;
+				L1:	aload_1;
+					sload 8;
+					baload;
+					sconst_4;
+					sshr;
+					bspush 15;
+					sand;
+					sstore 6;
+					aload_1;
+					sload 8;
+					baload;
+					bspush 15;
+					sand;
+					sstore 7;
+					sload 6;
+					bspush 10;
+					if_scmplt L4;
+				L2:	sload 6;
+					bspush 15;
+					if_scmpgt L4;
+				L3:	sload 6;
+					bspush 55;
+					sadd;
+					s2b;
+					sstore 6;
+					goto L5;
+				L4:	sload 6;
+					bspush 48;
+					sadd;
+					s2b;
+					sstore 6;
+				L5:	sload 7;
+					bspush 10;
+					if_scmplt L8;
+				L6:	sload 7;
+					bspush 15;
+					if_scmpgt L8;
+				L7:	sload 7;
+					bspush 55;
+					sadd;
+					s2b;
+					sstore 7;
+					goto L9;
+				L8:	sload 7;
+					bspush 48;
+					sadd;
+					s2b;
+					sstore 7;
+				L9:	aload 4;
+					sload 8;
+					sload 5;
+					sadd;
+					sload 6;
+					bastore;
+					aload 4;
+					sload 8;
+					sload 5;
+					sadd;
+					sconst_1;
+					sadd;
+					sload 7;
+					bastore;
+					sinc 5 1;
+					sinc 8 1;
+				L10:	sload 8;
+					sload_2;
+					if_scmplt L1;
+				L11:	invokestatic 39;		// sim/toolkit/ProactiveHandler.getTheHandler()Lsim/toolkit/ProactiveHandler;
+					astore 8;
+					aload 8;
+					sconst_0;
+					sconst_4;
+					aload 4;
+					sconst_0;
+					aload 4;
+					arraylength;
+					invokevirtual 45;		// sim/toolkit/ProactiveHandler.initDisplayText(BB[BSS)V
+					aload 8;
+					invokevirtual 42;		// sim/toolkit/ProactiveHandler.send()B
+					pop;
+					return;
+		}
+
+	}
+
+}

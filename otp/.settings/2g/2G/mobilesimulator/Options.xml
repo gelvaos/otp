@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<!DOCTYPE Options  [
+  <!ELEMENT Options (mobileOptions,terminalProfile,icons,events,spy,bip+)>
+  <!ELEMENT mobileOptions (optionsItems)>
+  <!ELEMENT optionsItems (terminalInterface,delayDisplay,delayUserResponse,defaultTimeIntervalStatusCommand,statusCommandAvailable,toneDuration,toneType,sizeScreenPolicy,styleScreenPolicy,colorScreenPolicy,cardTimeout,cardReset,IMEI,IMEISV)>
+  <!ELEMENT terminalInterface (selectedTerminalInterface,othersTerminaleInterface*)>
+  <!ELEMENT selectedTerminalInterface (#PCDATA)>
+  <!ELEMENT othersTerminaleInterface (#PCDATA)>
+  <!ELEMENT delayDisplay (#PCDATA)>
+  <!ELEMENT delayUserResponse (#PCDATA)>
+  <!ELEMENT defaultTimeIntervalStatusCommand (#PCDATA)>
+  <!ELEMENT statusCommandAvailable (#PCDATA)>
+  <!ELEMENT toneDuration (#PCDATA)>
+  <!ELEMENT toneType (mute,pc,set1,set2)>
+  <!ELEMENT mute (#PCDATA)>
+  <!ELEMENT pc (#PCDATA)>
+  <!ELEMENT set1 (#PCDATA)>
+  <!ELEMENT set2 (#PCDATA)>
+  <!ELEMENT sizeScreenPolicy (#PCDATA)>
+  <!ELEMENT styleScreenPolicy (#PCDATA)>
+  <!ELEMENT colorScreenPolicy (#PCDATA)>
+  <!ELEMENT cardTimeout (#PCDATA)>
+  <!ELEMENT cardReset (#PCDATA)>
+  <!ELEMENT IMEI (#PCDATA)>
+  <!ELEMENT IMEISV (#PCDATA)>
+  <!ELEMENT terminalProfile (proactiveCommands,downloadProfile,others)>
+  <!ELEMENT proactiveCommands (cdmaSendSMS,cdmaSMSPP,cdmaBroadcastSMS,maximumNumberSoftKeys,numberDisplayCharactersDown,numberChannels,numberDisplayCharactersAccross,menuWidthReduction,protocolVersion,envelopeCallControlRedial,eventDownloadBrowserTermination,eventDownloadDataAvailable,eventDownloadChannelStatus,getReaderStatusCardReaderId,launchBrowser,getChannelStatus,sendData,receiveData,closeChannel,openChannel,GPRS,CSD,screenSizing,variableSizeFonts,textScrolling,textWrapping,displayResizable,UDP,TCPClient,TCPServer,selectItemSoftKey,setupMenuSoftKey,refresh,moreTime,pollInterval,pollingOff,setupCall,sendSs,sendShortMsg,sendUssd,playTone,displayText,getInkey,getInput,selectItem,setupMenu,performCardApdu,powerOnCard,powerOffCard,getReaderStatus,localInfoMcc,localInfoNmr,localInfoBcch,localInfoLanguage,localInfoTiming,timerManagementStart,timerManagementCurrentValue,localInfoDate,binaryChoiseGetInkey,setUpIdleMode,runAtCommand,secondAlphaIdSetUpCall,secondCapabilityConfiguration,languageNotification,sustainedDisplayText,sendDtmfCommand,timerExpirationStk,eventDownloadCallConnectedStk,eventDownloadCallDisconnectedStk,eventDownloadLocationStatusStk,setUpEventListStk,eventDownloadMTCallStk,userActivityStk,eventDownloadIdleScreenStk,eventDownloadCardReaderStatusStk,eventDownloadLanguageSelectionStk,bipFilterRetransData,bipLogReceptionData,bipOcpUrl,bipLoadUrl,maxWaitForReceiveData,maxWaitForHttpResponse,provideLocalInfoIMEISV)>
+  <!ELEMENT cdmaSendSMS (#PCDATA)>
+  <!ELEMENT cdmaSMSPP (#PCDATA)>
+  <!ELEMENT cdmaBroadcastSMS (#PCDATA)>
+  <!ELEMENT maximumNumberSoftKeys (#PCDATA)>
+  <!ELEMENT numberDisplayCharactersDown (#PCDATA)>
+  <!ELEMENT numberChannels (#PCDATA)>
+  <!ELEMENT numberDisplayCharactersAccross (#PCDATA)>
+  <!ELEMENT menuWidthReduction (#PCDATA)>
+  <!ELEMENT protocolVersion (#PCDATA)>
+  <!ELEMENT envelopeCallControlRedial (#PCDATA)>
+  <!ELEMENT selectItemSoftKey (#PCDATA)>
+  <!ELEMENT setupMenuSoftKey (#PCDATA)>
+  <!ELEMENT eventDownloadBrowserTermination (#PCDATA)>
+  <!ELEMENT eventDownloadDataAvailable (#PCDATA)>
+  <!ELEMENT eventDownloadChannelStatus (#PCDATA)>
+  <!ELEMENT getReaderStatusCardReaderId (#PCDATA)>
+  <!ELEMENT launchBrowser (#PCDATA)>
+  <!ELEMENT getChannelStatus (#PCDATA)>
+  <!ELEMENT sendData (#PCDATA)>
+  <!ELEMENT receiveData (#PCDATA)>
+  <!ELEMENT closeChannel (#PCDATA)>
+  <!ELEMENT openChannel (#PCDATA)>
+  <!ELEMENT GPRS (#PCDATA)>
+  <!ELEMENT CSD (#PCDATA)>
+  <!ELEMENT screenSizing (#PCDATA)>
+  <!ELEMENT variableSizeFonts (#PCDATA)>
+  <!ELEMENT textScrolling (#PCDATA)>
+  <!ELEMENT textWrapping (#PCDATA)>
+  <!ELEMENT displayResizable (#PCDATA)>
+  <!ELEMENT UDP (#PCDATA)>
+  <!ELEMENT TCPClient (#PCDATA)>
+  <!ELEMENT TCPServer (#PCDATA)>
+  <!ELEMENT refresh (#PCDATA)>
+  <!ELEMENT moreTime (#PCDATA)>
+  <!ELEMENT pollInterval (#PCDATA)>
+  <!ELEMENT pollingOff (#PCDATA)>
+  <!ELEMENT setupCall (#PCDATA)>
+  <!ELEMENT sendSs (#PCDATA)>
+  <!ELEMENT sendShortMsg (#PCDATA)>
+  <!ELEMENT sendUssd (#PCDATA)>
+  <!ELEMENT playTone (#PCDATA)>
+  <!ELEMENT displayText (#PCDATA)>
+  <!ELEMENT getInkey (#PCDATA)>
+  <!ELEMENT getInput (#PCDATA)>
+  <!ELEMENT selectItem (#PCDATA)>
+  <!ELEMENT setupMenu (#PCDATA)>
+  <!ELEMENT performCardApdu (#PCDATA)>
+  <!ELEMENT powerOnCard (#PCDATA)>
+  <!ELEMENT powerOffCard (#PCDATA)>
+  <!ELEMENT getReaderStatus (#PCDATA)>
+  <!ELEMENT localInfoMcc (#PCDATA)>
+  <!ELEMENT localInfoNmr (#PCDATA)>
+  <!ELEMENT localInfoBcch (#PCDATA)>
+  <!ELEMENT localInfoLanguage (#PCDATA)>
+  <!ELEMENT localInfoTiming (#PCDATA)>
+  <!ELEMENT timerManagementStart (#PCDATA)>
+  <!ELEMENT timerManagementCurrentValue (#PCDATA)>
+  <!ELEMENT localInfoDate (#PCDATA)>
+  <!ELEMENT binaryChoiseGetInkey (#PCDATA)>
+  <!ELEMENT setUpIdleMode (#PCDATA)>
+  <!ELEMENT runAtCommand (#PCDATA)>
+  <!ELEMENT secondAlphaIdSetUpCall (#PCDATA)>
+  <!ELEMENT secondCapabilityConfiguration (#PCDATA)>
+  <!ELEMENT languageNotification (#PCDATA)>
+  <!ELEMENT sustainedDisplayText (#PCDATA)>
+  <!ELEMENT sendDtmfCommand (#PCDATA)>
+  <!ELEMENT timerExpirationStk (#PCDATA)>
+  <!ELEMENT eventDownloadCallConnectedStk (#PCDATA)>
+  <!ELEMENT eventDownloadCallDisconnectedStk (#PCDATA)>
+  <!ELEMENT eventDownloadLocationStatusStk (#PCDATA)>
+  <!ELEMENT setUpEventListStk (#PCDATA)>
+  <!ELEMENT eventDownloadMTCallStk (#PCDATA)>
+  <!ELEMENT userActivityStk (#PCDATA)>
+  <!ELEMENT eventDownloadIdleScreenStk (#PCDATA)>
+  <!ELEMENT eventDownloadCardReaderStatusStk (#PCDATA)>
+  <!ELEMENT eventDownloadLanguageSelectionStk (#PCDATA)>
+  <!ELEMENT bipFilterRetransData (#PCDATA)>
+  <!ELEMENT bipLogReceptionData (#PCDATA)>
+  <!ELEMENT bipOcpUrl (#PCDATA)>
+  <!ELEMENT bipLoadUrl (#PCDATA)>
+  <!ELEMENT maxWaitForReceiveData (#PCDATA)>
+  <!ELEMENT maxWaitForHttpResponse (#PCDATA)>
+  <!ELEMENT provideLocalInfoIMEISV (#PCDATA)>
+  <!ELEMENT downloadProfile (profileDonwload,smsPpData,cellBroadCast,menuSelection,responseCodeDataDownloadError,ussdString)>
+  <!ELEMENT profileDonwload (#PCDATA)>
+  <!ELEMENT smsPpData (#PCDATA)>
+  <!ELEMENT cellBroadCast (#PCDATA)>
+  <!ELEMENT menuSelection (#PCDATA)>
+  <!ELEMENT responseCodeDataDownloadError (#PCDATA)>
+  <!ELEMENT ussdString (#PCDATA)>
+  <!ELEMENT others (customCapabilities,customCapabilitiesEnabled,callControl,commandResult,cellIdentity,alphaId,ucs2Display,moSm,ucs2Entry,displayExtensionText)>
+  <!ELEMENT customCapabilities (#PCDATA)>
+  <!ELEMENT customCapabilitiesEnabled (#PCDATA)>
+  <!ELEMENT callControl (#PCDATA)>
+  <!ELEMENT commandResult (#PCDATA)>
+  <!ELEMENT cellIdentity (#PCDATA)>
+  <!ELEMENT alphaId (#PCDATA)>
+  <!ELEMENT ucs2Display (#PCDATA)>
+  <!ELEMENT moSm (#PCDATA)>
+  <!ELEMENT ucs2Entry (#PCDATA)>
+  <!ELEMENT displayExtensionText (#PCDATA)>
+  <!ELEMENT icons (iconSupported,iconColorSupported,iconTextMaxWidth,iconTextMaxHeight,iconOnlyMaxWidth,iconOnlyMaxHeight,iconItemMaxWidth,iconItemMaxHeight,iconPixelCorrespondenceWidht,iconPixelCorrespondenceHeight)>
+  <!ELEMENT iconSupported (#PCDATA)>
+  <!ELEMENT iconColorSupported (#PCDATA)>
+  <!ELEMENT iconTextMaxWidth (#PCDATA)>
+  <!ELEMENT iconTextMaxHeight (#PCDATA)>
+  <!ELEMENT iconOnlyMaxWidth (#PCDATA)>
+  <!ELEMENT iconOnlyMaxHeight (#PCDATA)>
+  <!ELEMENT iconItemMaxWidth (#PCDATA)>
+  <!ELEMENT iconItemMaxHeight (#PCDATA)>
+  <!ELEMENT iconPixelCorrespondenceWidht (#PCDATA)>
+  <!ELEMENT iconPixelCorrespondenceHeight (#PCDATA)>
+  <!ELEMENT events (eventDownloadBrowserTerminationCause,timerExpiration,eventDownloadCallConnected,eventDownloadCallDisconnected,eventDownloadLocationStatus,eventDownloadMTCall,userActivity,evenDownloadIdleScreen,eventDownloadCardReaderStatus,eventDownloadLanguageSelection,envelopeCallControl,eventDownloadDataAvailable,eventDownloadChannelStatus)>
+  <!ELEMENT eventDownloadBrowserTerminationCause (#PCDATA)>
+  <!ELEMENT timerExpiration (#PCDATA)>
+  <!ELEMENT eventDownloadCallConnected (#PCDATA)>
+  <!ELEMENT eventDownloadCallDisconnected (#PCDATA)>
+  <!ELEMENT eventDownloadLocationStatus (#PCDATA)>
+  <!ELEMENT eventDownloadMTCall (#PCDATA)>
+  <!ELEMENT userActivity (#PCDATA)>
+  <!ELEMENT evenDownloadIdleScreen (#PCDATA)>
+  <!ELEMENT eventDownloadCardReaderStatus (#PCDATA)>
+  <!ELEMENT eventDownloadLanguageSelection (#PCDATA)>
+  <!ELEMENT envelopeCallControl (#PCDATA)>
+  <!ELEMENT spy (onTheFlyAnalysis,logTraceFile,logTraceFileName,compareSimResponse,stopOnDiffResponse,recordFileName,spyEnabled)>
+  <!ELEMENT onTheFlyAnalysis (#PCDATA)>
+  <!ELEMENT logTraceFile (#PCDATA)>
+  <!ELEMENT logTraceFileName (#PCDATA)>
+  <!ELEMENT compareSimResponse (#PCDATA)>
+  <!ELEMENT stopOnDiffResponse (#PCDATA)>
+  <!ELEMENT recordFileName (#PCDATA)>
+  <!ELEMENT spyEnabled (#PCDATA)>
+  <!ELEMENT bip (bipdelaytimer,bufferSize,destinationAddress,localPort,transportProtocol)>
+  <!ATTLIST bip channel CDATA "1">
+  <!ELEMENT bipdelaytimer (#PCDATA)>
+  <!ELEMENT bufferSize (#PCDATA)>
+  <!ELEMENT destinationAddress (useDestinationAddressValue,destinationAddressDefaultValue)>
+  <!ELEMENT useDestinationAddressValue (#PCDATA)>
+  <!ELEMENT destinationAddressDefaultValue (#PCDATA)>
+  <!ELEMENT localPort (#PCDATA)>
+  <!ELEMENT transportProtocol (useTransportProtocolValue,transportProtocolValueDefaultValue)>
+  <!ELEMENT useTransportProtocolValue (#PCDATA)>
+  <!ELEMENT transportProtocolValueDefaultValue (#PCDATA)>]>
+
+<Options>
+  <mobileOptions>
+    <optionsItems>
+      <terminalInterface>
+        <selectedTerminalInterface>gemalto</selectedTerminalInterface>
+        <othersTerminaleInterface>gemalto</othersTerminaleInterface>
+      </terminalInterface>
+      <delayDisplay>2222</delayDisplay>
+      <delayUserResponse>500</delayUserResponse>
+      <defaultTimeIntervalStatusCommand>30000</defaultTimeIntervalStatusCommand>
+      <statusCommandAvailable>false</statusCommandAvailable>
+      <toneDuration>100</toneDuration>
+      <toneType>
+        <mute>false</mute>
+        <pc>true</pc>
+        <set1>false</set1>
+        <set2>false</set2>
+      </toneType>
+      <sizeScreenPolicy>3</sizeScreenPolicy>
+      <styleScreenPolicy>SimSun</styleScreenPolicy>
+      <colorScreenPolicy>000000</colorScreenPolicy>
+      <cardTimeout>20000</cardTimeout>
+      <cardReset>true</cardReset>
+      <IMEI>112233445566770</IMEI>
+      <IMEISV>1122334455667788</IMEISV>
+    </optionsItems>
+  </mobileOptions>
+  <terminalProfile>
+    <proactiveCommands>
+      <cdmaSendSMS>true</cdmaSendSMS>
+      <cdmaSMSPP>false</cdmaSMSPP>
+      <cdmaBroadcastSMS>false</cdmaBroadcastSMS>
+      <maximumNumberSoftKeys>0</maximumNumberSoftKeys>
+      <numberDisplayCharactersDown>6</numberDisplayCharactersDown>
+      <numberChannels>7</numberChannels>
+      <numberDisplayCharactersAccross>24</numberDisplayCharactersAccross>
+      <menuWidthReduction>0</menuWidthReduction>
+      <protocolVersion>0</protocolVersion>
+      <envelopeCallControlRedial>false</envelopeCallControlRedial>
+      <eventDownloadBrowserTermination>true</eventDownloadBrowserTermination>
+      <eventDownloadDataAvailable>true</eventDownloadDataAvailable>
+      <eventDownloadChannelStatus>true</eventDownloadChannelStatus>
+      <getReaderStatusCardReaderId>false</getReaderStatusCardReaderId>
+      <launchBrowser>true</launchBrowser>
+      <getChannelStatus>true</getChannelStatus>
+      <sendData>true</sendData>
+      <receiveData>true</receiveData>
+      <closeChannel>true</closeChannel>
+      <openChannel>true</openChannel>
+      <GPRS>false</GPRS>
+      <CSD>false</CSD>
+      <screenSizing>true</screenSizing>
+      <variableSizeFonts>true</variableSizeFonts>
+      <textScrolling>true</textScrolling>
+      <textWrapping>false</textWrapping>
+      <displayResizable>false</displayResizable>
+      <UDP>true</UDP>
+      <TCPClient>true</TCPClient>
+      <TCPServer>true</TCPServer>
+      <selectItemSoftKey>false</selectItemSoftKey>
+      <setupMenuSoftKey>false</setupMenuSoftKey>
+      <refresh>true</refresh>
+      <moreTime>true</moreTime>
+      <pollInterval>true</pollInterval>
+      <pollingOff>true</pollingOff>
+      <setupCall>true</setupCall>
+      <sendSs>true</sendSs>
+      <sendShortMsg>true</sendShortMsg>
+      <sendUssd>true</sendUssd>
+      <playTone>true</playTone>
+      <displayText>true</displayText>
+      <getInkey>true</getInkey>
+      <getInput>true</getInput>
+      <selectItem>true</selectItem>
+      <setupMenu>true</setupMenu>
+      <performCardApdu>true</performCardApdu>
+      <powerOnCard>true</powerOnCard>
+      <powerOffCard>true</powerOffCard>
+      <getReaderStatus>true</getReaderStatus>
+      <localInfoMcc>true</localInfoMcc>
+      <localInfoNmr>false</localInfoNmr>
+      <localInfoBcch>false</localInfoBcch>
+      <localInfoLanguage>false</localInfoLanguage>
+      <localInfoTiming>false</localInfoTiming>
+      <timerManagementStart>true</timerManagementStart>
+      <timerManagementCurrentValue>true</timerManagementCurrentValue>
+      <localInfoDate>false</localInfoDate>
+      <binaryChoiseGetInkey>true</binaryChoiseGetInkey>
+      <setUpIdleMode>false</setUpIdleMode>
+      <runAtCommand>false</runAtCommand>
+      <secondAlphaIdSetUpCall>false</secondAlphaIdSetUpCall>
+      <secondCapabilityConfiguration>false</secondCapabilityConfiguration>
+      <languageNotification>false</languageNotification>
+      <sustainedDisplayText>true</sustainedDisplayText>
+      <sendDtmfCommand>false</sendDtmfCommand>
+      <timerExpirationStk>true</timerExpirationStk>
+      <eventDownloadCallConnectedStk>true</eventDownloadCallConnectedStk>
+      <eventDownloadCallDisconnectedStk>true</eventDownloadCallDisconnectedStk>
+      <eventDownloadLocationStatusStk>true</eventDownloadLocationStatusStk>
+      <setUpEventListStk>true</setUpEventListStk>
+      <eventDownloadMTCallStk>true</eventDownloadMTCallStk>
+      <userActivityStk>false</userActivityStk>
+      <eventDownloadIdleScreenStk>false</eventDownloadIdleScreenStk>
+      <eventDownloadCardReaderStatusStk>false</eventDownloadCardReaderStatusStk>
+      <eventDownloadLanguageSelectionStk>false</eventDownloadLanguageSelectionStk>
+      <bipFilterRetransData>false</bipFilterRetransData>
+      <bipLogReceptionData>false</bipLogReceptionData>
+      <bipOcpUrl>http://127.0.0.1:3516/</bipOcpUrl>
+      <bipLoadUrl>http://127.0.0.1:3516/</bipLoadUrl>
+      <maxWaitForReceiveData>60000</maxWaitForReceiveData>
+      <maxWaitForHttpResponse>60000</maxWaitForHttpResponse>
+      <provideLocalInfoIMEISV>true</provideLocalInfoIMEISV>
+    </proactiveCommands>
+    <downloadProfile>
+      <profileDonwload>true</profileDonwload>
+      <smsPpData>true</smsPpData>
+      <cellBroadCast>false</cellBroadCast>
+      <menuSelection>true</menuSelection>
+      <responseCodeDataDownloadError>true</responseCodeDataDownloadError>
+      <ussdString>false</ussdString>
+    </downloadProfile>
+    <others>
+      <customCapabilities>3B 67 FF 7F 1F 02 0F 0B 41 00 00 00 00 86 98 04 00 00 00 07</customCapabilities>
+      <customCapabilitiesEnabled>false</customCapabilitiesEnabled>
+      <callControl>true</callControl>
+      <commandResult>true</commandResult>
+      <cellIdentity>true</cellIdentity>
+      <alphaId>false</alphaId>
+      <ucs2Display>true</ucs2Display>
+      <moSm>false</moSm>
+      <ucs2Entry>true</ucs2Entry>
+      <displayExtensionText>false</displayExtensionText>
+    </others>
+  </terminalProfile>
+  <icons>
+    <iconSupported>false</iconSupported>
+    <iconColorSupported>false</iconColorSupported>
+    <iconTextMaxWidth>17</iconTextMaxWidth>
+    <iconTextMaxHeight>22</iconTextMaxHeight>
+    <iconOnlyMaxWidth>96</iconOnlyMaxWidth>
+    <iconOnlyMaxHeight>64</iconOnlyMaxHeight>
+    <iconItemMaxWidth>6</iconItemMaxWidth>
+    <iconItemMaxHeight>9</iconItemMaxHeight>
+    <iconPixelCorrespondenceWidht>1</iconPixelCorrespondenceWidht>
+    <iconPixelCorrespondenceHeight>1</iconPixelCorrespondenceHeight>
+  </icons>
+  <events>
+    <eventDownloadBrowserTerminationCause>true</eventDownloadBrowserTerminationCause>
+    <timerExpiration>true</timerExpiration>
+    <eventDownloadCallConnected>true</eventDownloadCallConnected>
+    <eventDownloadCallDisconnected>true</eventDownloadCallDisconnected>
+    <eventDownloadLocationStatus>true</eventDownloadLocationStatus>
+    <eventDownloadMTCall>true</eventDownloadMTCall>
+    <userActivity>false</userActivity>
+    <evenDownloadIdleScreen>false</evenDownloadIdleScreen>
+    <eventDownloadCardReaderStatus>false</eventDownloadCardReaderStatus>
+    <eventDownloadLanguageSelection>false</eventDownloadLanguageSelection>
+    <envelopeCallControl>false</envelopeCallControl>
+    <eventDownloadDataAvailable>true</eventDownloadDataAvailable>
+    <eventDownloadChannelStatus>true</eventDownloadChannelStatus>
+  </events>
+  <spy>
+    <onTheFlyAnalysis>true</onTheFlyAnalysis>
+    <logTraceFile>true</logTraceFile>
+    <logTraceFileName>spy000.log</logTraceFileName>
+    <compareSimResponse>true</compareSimResponse>
+    <stopOnDiffResponse>true</stopOnDiffResponse>
+    <recordFileName>spy000.spy</recordFileName>
+    <spyEnabled>true</spyEnabled>
+  </spy>
+  <bip channel="1">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>true</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>3516</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>true</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPServer</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="2">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10081</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="3">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10082</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="4">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10083</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="5">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10084</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="6">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10085</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="7">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10086</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+  <bip channel="8">
+    <bipdelaytimer>1000</bipdelaytimer>
+    <bufferSize>15000</bufferSize>
+    <destinationAddress>
+      <useDestinationAddressValue>false</useDestinationAddressValue>
+      <destinationAddressDefaultValue>127.0.0.1:8080</destinationAddressDefaultValue>
+    </destinationAddress>
+    <localPort>10087</localPort>
+    <transportProtocol>
+      <useTransportProtocolValue>false</useTransportProtocolValue>
+      <transportProtocolValueDefaultValue>TCPClient</transportProtocolValueDefaultValue>
+    </transportProtocol>
+  </bip>
+</Options>

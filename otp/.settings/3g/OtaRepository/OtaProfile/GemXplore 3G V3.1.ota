@@ -1,0 +1,31 @@
+#OTA Profile properties file - Simulation Chain v2.0
+#Fri Jan 07 14:06:16 CET 2005
+CommandPacketHeader.ChiExpectedLength=0
+CommandPacketHeader.CpSynchroCounterFormatter=com.gemplus.tpudlib.internal.On5BytesFormatter
+CommandPacketHeader.CpSynchroCounterMax=1099511627775
+CommandPacketHeader.DataToCipherPadder=com.gemplus.tpudlib.internal.algorithm.DataPadderImpl
+CommandPacketHeader.DataToSignAgent=com.gemplus.tpudlib.internal.gsm0348.header.CplChlRCCCDSForCp
+Concatenation.Available=true
+Concatenation.HeaderSize=0
+Concatenation.TpudMaxLength=140
+Kic.CipheringKey=30 42 30 42 30 44 30 44 30 45 30 45 30 46 30 46
+Kic.CipheringName=TripleDES/CBC/None
+Kic.Value=24
+Kid.SecurityKey=01 23 45 67 89 AB CD EF 10 02 76 FE DC BA 01 23
+Kid.SecurityName=TripleDES
+Kid.Value=24
+Profile.CardTemplate=GemXplore 3G V3.1
+ResponsePacketHeader.DataToSignAgent=com.gemplus.tpudlib.internal.gsm0348.header.UdhlRCCCDSForRp
+ResponsePacketHeader.RhiExpectedLength=0
+ResponsePacketHeader.RpSynchroCounterFormatter=com.gemplus.tpudlib.internal.On5BytesFormatter
+ResponsePacketHeader.RpSynchroCounterMax=1099511627775
+Sms.Data.DataCodingScheme=16
+Sms.Data.ProtocolIdentifier=7F
+Sms.OriginatingAddress.Number=3311111111
+Sms.OriginatingAddress.TonNpi=98
+Sms.ReplyPath=true
+Sms.StatusReportIndication=true
+Sms.Text.DataCodingScheme=10
+Sms.Text.ProtocolIdentifier=41
+Spi.SynchoCounters=0
+Spi.Value=02 01

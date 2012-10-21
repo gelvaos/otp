@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=USIMERA Classic 4 V2 1Mb
+
+# name of the protocol profile associated to the card
+Protocol=USIMERA Classic 4 V2 1Mb_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=USIMERA Classic 4 V2 1Mb_algorithm
+
+#name of the command set associated to the card
+Command.Set=Gxx3G

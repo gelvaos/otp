@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=UpTeq Multimedia Ready V1.0_SCWS mode
+
+# name of the protocol profile associated to the card
+Protocol=UpTeq Multimedia Ready V1.0_SCWS mode_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=UpTeq Multimedia Ready V1.0_SCWS mode_algorithm
+
+#name of the command set associated to the card
+Command.Set=GxxV3

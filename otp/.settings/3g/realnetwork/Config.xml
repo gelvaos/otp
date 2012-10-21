@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RealNetworkConfig>
+<ProfileConfig>
+<Profile Name="Sony Ericsson W800c">
+<BaudRate>9600</BaudRate>
+<DataBits>8</DataBits>
+<Parity>0</Parity>
+<StopBits>1</StopBits>
+<FlowControlMode>0</FlowControlMode>
+</Profile>
+</ProfileConfig>
+<PortConfig>
+<CurrentProfile>Sony Ericsson W800c</CurrentProfile>
+<CurrentPort>COM1</CurrentPort>
+</PortConfig>
+<SCConfig>
+<Ton>1</Ton>
+<Npi>1</Npi>
+<Address></Address>
+</SCConfig>
+</RealNetworkConfig>

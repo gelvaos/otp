@@ -1,0 +1,83 @@
+# name of the parameter set within the repository
+Name=USIMERA Classic 4 V2 1Mb
+
+# name of the protocol formatter type
+Type=03.48
+
+# concatenation reference number
+#Concatenation.ReferenceNb=
+
+# SPI value
+#
+# First Byte : 
+#	000        00           0               10                             = 0x02
+#	Reserved   No counter   No ciphering    CC ( according MSL )  
+#
+# Second Byte : 
+#	00         0               0            00            01               = 0x01
+#	Reserved   PoR resp        PoR resp     No security   PoR required
+#              Deliver-Repot   not cipher   to PoR resp         
+#
+SPI=0x02 0x01
+
+# Kic value
+#	0001         01                  01                                    = 0x15
+#	Key Set  1   3-DES CBC 2 keys    DES
+#
+KIC=0x15
+
+# Kid value
+#	0001         01                  01                                    = 0x15
+#	Key Set  1   3-DES CBC 2 keys    DES
+#
+KID=0x15
+
+# TAR value
+# GSM interpreter TAR
+TAR=0xB0 0x00 0x10 
+
+# CNTR value
+CNTR=0
+
+# JCE algorithm name used to cipher
+# key set 1 used for OTA
+Cipher.Algorithm.Name=TripleDES/CBC/None
+
+# cipher key value
+# key set 1 used for OTA
+Cipher.Algorithm.Key=0x30 0x42 0x30 0x42 0x30 0x44 0x30 0x44 0x30 0x45 0x30 0x45 0x30 0x46 0x30 0x46
+
+# cipher algorithm initialization vector
+Cipher.Algorithm.IV=0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+
+# JCE algorithm name used to compute a RC
+RC.Algorithm.Name=XOR4
+
+# RC algorithm initialization vector
+#RC.Algorithm.IV=
+
+# JCE algorithm name used to compute a CC
+# key set 1 used for OTA
+CC.Algorithm.Name=TripleDES
+
+# CC key value
+# key set 1 used for OTA
+CC.Algorithm.Key=0x30 0x42 0x30 0x42 0x30 0x44 0x30 0x44 0x30 0x45 0x30 0x45 0x30 0x46 0x30 0x46
+
+# CC algorithm initialization vector
+#CC.Algorithm.IV=
+
+# JCE algorithm name used to compute a DS
+#DS.Algorithm.Name=
+
+# DS key value
+#DS.Algorithm.Key=
+
+# DS algorithm initialization vector
+#DS.Algorithm.IV=
+
+# Response packet Status code value
+#Status.Code=
+
+# Cell broadcast packet specific header value
+#SN.MID.DCS.PP=

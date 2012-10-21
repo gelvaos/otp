@@ -1,0 +1,15 @@
+# authserver
+
+This is proof-of-concept implementation of One Time Password authentication server
+
+## Usage
+
+Run it like:
+
+java -jar authserver-1.0.0-standalone.jar
+
+## License
+
+Copyright (C) 2012 Nodir Gulyamov
+
+Distributed under the Eclipse Public License, the same as Clojure.

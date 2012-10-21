@@ -1,0 +1,83 @@
+# name of the parameter set within the repository
+Name=GemXplore Generations Flexible
+
+# name of the protocol formatter type
+Type=03.48
+
+# concatenation reference number
+#Concatenation.ReferenceNb=
+
+# SPI value
+#
+# First Byte : 
+#	000        00           0               10                             = 0x02
+#	Reserved   No counter   No ciphering    CC ( according MSL )  
+#
+# Second Byte : 
+#	00         0               1            01            01               = 0x21
+#	Reserved   PoR resp        PoR resp     No security   PoR required
+#              Submit   not cipher   to PoR resp         
+#
+SPI=0x02 0x21
+
+# Kic value
+#	0010         01                  00                                    = 0x24
+#	Key Set  2   3-DES CBC 2 keys    Algorithm known by both entities
+#
+KIC=0x24
+
+# Kid value
+#	0010         01                  00                                    = 0x24
+#	Key Set  2   3-DES CBC 2 keys    Algorithm known by both entities
+#
+KID=0x24
+
+# TAR value
+# GSM interpreter TAR
+TAR=0xB0 0x00 0x10 
+
+# CNTR value
+CNTR=0
+
+# JCE algorithm name used to cipher
+# key set 2 used for OTA
+Cipher.Algorithm.Name=TripleDES/CBC/None
+
+# cipher key value
+# key set 2 used for OTA
+Cipher.Algorithm.Key=0x30 0x42 0x30 0x42 0x30 0x44 0x30 0x44 0x30 0x45 0x30 0x45 0x30 0x46 0x30 0x46 
+
+# cipher algorithm initialization vector
+Cipher.Algorithm.IV=0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+
+# JCE algorithm name used to compute a RC
+RC.Algorithm.Name=XOR4
+
+# RC algorithm initialization vector
+#RC.Algorithm.IV=
+
+# JCE algorithm name used to compute a CC
+# key set 2 used for OTA
+CC.Algorithm.Name=TripleDES
+
+# CC key value
+# key set 2 used for OTA
+CC.Algorithm.Key=0x01 0x23 0x45 0x67 0x89 0xAB 0xCD 0xEF 0x10 0x02 0x76 0xFE 0xDC 0xBA 0x01 0x23
+
+# CC algorithm initialization vector
+#CC.Algorithm.IV=
+
+# JCE algorithm name used to compute a DS
+#DS.Algorithm.Name=
+
+# DS key value
+#DS.Algorithm.Key=
+
+# DS algorithm initialization vector
+#DS.Algorithm.IV=
+
+# Response packet Status code value
+#Status.Code=
+
+# Cell broadcast packet specific header value
+#SN.MID.DCS.PP=

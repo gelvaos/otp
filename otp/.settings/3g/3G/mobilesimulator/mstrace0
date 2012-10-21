@@ -1,0 +1,8 @@
+TRACE
+Class: class mobilesimulator3g6.a50 - Method: openXmlGuiConfigDocument - Comment: try to find the file, result : KO !
+TRACE
+Class: ReadAlphaNumFromGui - Method: run - Comment: killed
+TRACE
+Class: class mobilesimulator3g15.a144 - Method: run - Comment: killed
+TRACE
+Class: class mobilesimulator3g15.a133 - Method: run - Comment: killed

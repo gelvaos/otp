@@ -1,0 +1,106 @@
+# Card Profile list
+Profile.1=GemXplore Xpresso V3 64K PK/GemXplore Xpresso V3 64K PK_card.txt
+Profile.2=GemXplore Xpresso V3 64K/GemXplore Xpresso V3 64K_card.txt
+Profile.3=GemXplore Xpresso V3 32K/GemXplore Xpresso V3 32K_card.txt
+Profile.4=GemXplore 3G V2.1 64K PK/GemXplore 3G V2.1 64K PK_card.txt
+Profile.5=GemXplore 3G V2.2 128K PK/GemXplore 3G V2.2 128K PK_card.txt
+Profile.6=GemXplore Xpresso V3.1 64K/GemXplore Xpresso V3.1 64K_card.txt
+Profile.7=GemXplore Xpresso V3.2 128K/GemXplore Xpresso V3.2 128K_card.txt
+Profile.8=SIM Alliance interoperable/SIM Alliance interoperable_card.txt
+Profile.9=GemXplore Xpresso V3.2/GemXplore Xpresso V3.2_card.txt
+Profile.10=GemXplore Xpresso V3.2 72K Browsers/GemXplore Xpresso V3.2 72K Browsers_card.txt
+Profile.11=GemXplore 3G V3.0/GemXplore 3G V3.0_card.txt
+Profile.12=GemXplore Xpresso V3.3/GemXplore Xpresso V3.3_card.txt
+Profile.13=GemXplore Generations Flexible/GemXplore Generations Flexible_card.txt
+Profile.14=GemXplore Generations option CDMA/GemXplore Generations option CDMA_card.txt
+Profile.15=GemXplore 3G V3.1/GemXplore 3G V3.1_card.txt
+Profile.16=GemXplore World 32K/GemXplore World 32K_card.txt
+Profile.17=GemXplore World 64K/GemXplore World 64K_card.txt
+Profile.18=SIMERA Classic 3.32 32K/SIMERA Classic 3.32 32K_card.txt
+Profile.19=USIMERA Classic 3 68K/USIMERA Classic 3 68K_card.txt
+Profile.20=USIMERA Classic 4 V2 1Mb/USIMERA Classic 4 V2 1Mb_card.txt
+Profile.21=UpTeq Multimedia Ready V1.0_SCWS mode/UpTeq Multimedia Ready V1.0_SCWS mode_card.txt
+Profile.22=Simulator_SCWS/Simulator_SCWS_card.txt
+
+# Protocol Profile list
+Protocol.1=GemXplore Xpresso V3 64K PK/GemXplore Xpresso V3 64K PK_protocol.txt
+Protocol.2=GemXplore Xpresso V3 64K/GemXplore Xpresso V3 64K_protocol.txt
+Protocol.3=GemXplore Xpresso V3 32K/GemXplore Xpresso V3 32K_protocol.txt
+Protocol.4=GemXplore 3G V2.1 64K PK/GemXplore 3G V2.1 64K PK_protocol.txt
+Protocol.5=GemXplore 3G V2.2 128K PK/GemXplore 3G V2.2 128K PK_protocol.txt
+Protocol.6=GemXplore Xpresso V3.1 64K/GemXplore Xpresso V3.1 64K_protocol.txt
+Protocol.7=GemXplore Xpresso V3.2 128K/GemXplore Xpresso V3.2 128K_protocol.txt
+Protocol.8=SIM Alliance interoperable/SIM Alliance interoperable_protocol.txt
+Protocol.9=GemXplore Xpresso V3.2/GemXplore Xpresso V3.2_protocol.txt
+Protocol.10=GemXplore Xpresso V3.2 72K Browsers/GemXplore Xpresso V3.2 72K Browsers_protocol.txt
+Protocol.11=GemXplore 3G V3.0/GemXplore 3G V3.0_protocol.txt
+Protocol.12=GemXplore Xpresso V3.3/GemXplore Xpresso V3.3_protocol.txt
+Protocol.13=GemXplore Generations Flexible/GemXplore Generations Flexible_protocol.txt
+Protocol.14=GemXplore Generations option CDMA/GemXplore Generations option CDMA_protocol.txt
+Protocol.15=GemXplore 3G V3.1/GemXplore 3G V3.1_protocol.txt
+Protocol.16=GemXplore World 32K/GemXplore World 32K_protocol.txt
+Protocol.17=GemXplore World 64K/GemXplore World 64K_protocol.txt
+Protocol.18=SIMERA Classic 3.32 32K/SIMERA Classic 3.32 32K_protocol.txt
+Protocol.19=USIMERA Classic 3 68K/USIMERA Classic 3 68K_protocol.txt
+Protocol.20=USIMERA Classic 4 V2 1Mb/USIMERA Classic 4 V2 1Mb_protocol.txt
+Protocol.21=UpTeq Multimedia Ready V1.0_SCWS mode/UpTeq Multimedia Ready V1.0_SCWS mode_protocol.txt
+Protocol.22=Simulator_SCWS/Simulator_SCWS_protocol.txt
+
+# Algorithm Bundle list
+Algo.1=GemXplore Xpresso V3 64K PK/GemXplore Xpresso V3 64K PK_algorithm.txt
+Algo.2=GemXplore Xpresso V3 64K/GemXplore Xpresso V3 64K_algorithm.txt
+Algo.3=GemXplore Xpresso V3 32K/GemXplore Xpresso V3 32K_algorithm.txt
+Algo.4=GemXplore 3G V2.1 64K PK/GemXplore 3G V2.1 64K PK_algorithm.txt
+Algo.5=GemXplore 3G V2.2 128K PK/GemXplore 3G V2.2 128K PK_algorithm.txt
+Algo.6=GemXplore Xpresso V3.1 64K/GemXplore Xpresso V3.1 64K_algorithm.txt
+Algo.7=GemXplore Xpresso V3.2 128K/GemXplore Xpresso V3.2 128K_algorithm.txt
+Algo.8=SIM Alliance interoperable/SIM Alliance interoperable_algorithm.txt
+Algo.9=GemXplore Xpresso V3.2/GemXplore Xpresso V3.2_algorithm.txt
+Algo.10=GemXplore Xpresso V3.2 72K Browsers/GemXplore Xpresso V3.2 72K Browsers_algorithm.txt
+Algo.11=GemXplore 3G V3.0/GemXplore 3G V3.0_algorithm.txt
+Algo.12=GemXplore Xpresso V3.3/GemXplore Xpresso V3.3_algorithm.txt
+Algo.13=GemXplore Generations Flexible/GemXplore Generations Flexible_algorithm.txt
+Algo.14=GemXplore Generations option CDMA/GemXplore Generations option CDMA_algorithm.txt
+Algo.15=GemXplore 3G V3.1/GemXplore 3G V3.1_algorithm.txt
+Algo.16=GemXplore World 32K/GemXplore World 32K_algorithm.txt
+Algo.17=GemXplore World 64K/GemXplore World 64K_algorithm.txt
+Algo.18=SIMERA Classic 3.32 32K/SIMERA Classic 3.32 32K_algorithm.txt
+Algo.19=USIMERA Classic 3 68K/USIMERA Classic 3 68K_algorithm.txt
+Algo.20=USIMERA Classic 4 V2 1Mb/USIMERA Classic 4 V2 1Mb_algorithm.txt
+Algo.21=UpTeq Multimedia Ready V1.0_SCWS mode/UpTeq Multimedia Ready V1.0_SCWS mode_algorithm.txt
+Algo.22=Simulator_SCWS/Simulator_SCWS_algorithm.txt
+
+# Parameter set list
+ParameterSet.1=GemXplore Xpresso V3 64K PK/GemXplore Xpresso V3 64K PK_parameter.txt
+ParameterSet.2=GemXplore Xpresso V3 64K/GemXplore Xpresso V3 64K_parameter.txt
+ParameterSet.3=GemXplore Xpresso V3 32K/GemXplore Xpresso V3 32K_parameter.txt
+ParameterSet.4=GemXplore 3G V2.1 64K PK/GemXplore 3G V2.1 64K PK_parameter.txt
+ParameterSet.5=GemXplore 3G V2.2 128K PK/GemXplore 3G V2.2 128K PK_parameter.txt
+ParameterSet.6=GemXplore Xpresso V3.1 64K/GemXplore Xpresso V3.1 64K_parameter.txt
+ParameterSet.7=GemXplore Xpresso V3.2 128K/GemXplore Xpresso V3.2 128K_parameter.txt
+ParameterSet.8=SIM Alliance interoperable/SIM Alliance interoperable_parameter.txt
+ParameterSet.9=GemXplore Xpresso V3.2/GemXplore Xpresso V3.2_parameter.txt
+ParameterSet.10=GemXplore Xpresso V3.2 72K Browsers/GemXplore Xpresso V3.2 72K Browsers_parameter.txt
+ParameterSet.11=GemXplore 3G V3.0/GemXplore 3G V3.0_parameter.txt
+ParameterSet.12=GemXplore Xpresso V3.3/GemXplore Xpresso V3.3_parameter.txt
+ParameterSet.13=GemXplore Generations Flexible/GemXplore Generations Flexible_parameter.txt
+ParameterSet.14=GemXplore Generations option CDMA/GemXplore Generations option CDMA_parameter.txt
+ParameterSet.15=GemXplore 3G V3.1/GemXplore 3G V3.1_parameter.txt
+ParameterSet.16=GemXplore World 32K/GemXplore World 32K_parameter.txt
+ParameterSet.17=GemXplore World 64K/GemXplore World 64K_parameter.txt
+ParameterSet.18=SIMERA Classic 3.32 32K/SIMERA Classic 3.32 32K_parameter.txt
+ParameterSet.19=USIMERA Classic 3 68K/USIMERA Classic 3 68K_parameter.txt
+ParameterSet.20=USIMERA Classic 4 V2 1Mb/USIMERA Classic 4 V2 1Mb_parameter.txt
+ParameterSet.21=UpTeq Multimedia Ready V1.0_SCWS mode/UpTeq Multimedia Ready V1.0_SCWS mode_parameter.txt
+ParameterSet.22=Simulator_SCWS/Simulator_SCWS_parameter.txt
+
+# Tracer information
+#Tracer.Type=none
+#Tracer.DisplayInfo=false
+
+# Custom algorithm declaration
+#Cipher.<algo_JCEname>=
+#Mac.<algo_JCEname>=
+
+# Directory where scripts are compiled
+Compilation.Directory=generated_scenario

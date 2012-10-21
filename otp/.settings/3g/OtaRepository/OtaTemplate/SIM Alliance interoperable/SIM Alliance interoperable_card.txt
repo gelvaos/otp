@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=SIM Alliance interoperable
+
+# name of the protocol profile associated to the card
+Protocol=SIM Alliance interoperable_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=SIM Alliance interoperable_algorithm
+
+#name of the command set associated to the card
+Command.Set=GxxV3

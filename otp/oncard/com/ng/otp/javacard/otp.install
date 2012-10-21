@@ -1,0 +1,29 @@
+[CONVERT]
+PackageAID = A0000000185000000000000052414450
+PackageVersion = 2.0
+PackageName = com.ng.otp
+AppletClassAID = A0000000185000000000000052414441
+AppletClassName = com.ng.otp.otp
+
+[LOAD]
+MaxLoadCommandDataLength = C2
+
+[INSTALL(load)]
+PackageAID = A0000000185000000000000052414450
+PackageNonVolatileMemSize = 0000
+
+[INSTALL(install)]
+PackageAID = A0000000185000000000000052414450
+AppletClassAID = A0000000185000000000000052414441
+InstanceAID = A0000000185000000000000052414441
+InstallationNonVolatileMemSize = 0000
+InstallationVolatileMemSize = 0000
+AccessDomain = 00
+PriorityLevel = FF
+MaxNumberOfTimers = 00
+MaxMenuEntryTextLength = 20
+MaxNumberOfMenuEntries = 02
+MaxMenuEntryNumber = 02
+MenuEntriesPositionIdentifier = 00010002
+MaxNumberOfChannels = 00
+MSLFieldLength = 00

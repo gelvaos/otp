@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_15" class="java.beans.XMLDecoder"> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.CmdWarmReset"/> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.context.CmdLoadContext"> 
+  <void property="cleanup"> 
+   <boolean>true</boolean> 
+  </void> 
+  <void property="contextUri"> 
+   <string>.\otp.gdp</string> 
+  </void> 
+  <void property="overwritting"> 
+   <boolean>true</boolean> 
+  </void> 
+ </object> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.op201p.CmdAuthenticate"/> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.op201p.CmdDelete"> 
+  <void property="contextualProperties"> 
+   <void index="0"> 
+    <void property="contextKey"> 
+     <string>JCProject.Application.Applet.1.Instance.1.Aid</string> 
+    </void> 
+   </void> 
+  </void> 
+ </object> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.op201p.CmdDelete"/> 
+ <object class="com.gemplus.mugel.cmdfwk.cmd.CmdWarmReset"/> 
+</java> 

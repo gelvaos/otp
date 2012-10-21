@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding='utf-8' ?>
+<GemplusToolsRegistry>
+   <APPLICATIONS>
+      <APPLICATION name='SIMUCHAIN.2G'>
+        <PROPERTY name='label' value='Simulation Chain 2G' />
+        <PROPERTY name='home' value='%HOME%' />
+        <PROPERTY name='version' value='%VERSION%' />
+        <PROPERTY name='serialnumber' value='%SERIALNUMBER%' />
+		<PROPERTY name="classpathfile" value=".\lib\animatedtransitions.jar;.\lib\apdu-observer.jar;.\lib\apdu-producer-simulator.jar;.\lib\base-core.jar;.\lib\base-opt.jar;.\lib\bcprov.jar;.\lib\beansbinding.jar;.\lib\CardAccess.jar;.\lib\cryptix-jce-api.jar;.\lib\Crypto_Provider.jar;.\lib\dom4j.jar;.\lib\dxml.jar;.\lib\gemplus-rad-terminals.jar;.\lib\GemplusToolsRegistry.jar;.\lib\GemTranslator.jar;.\lib\jai_codec.jar;.\lib\jai_core.jar;.\lib\jaxen.jar;.\lib\jdic.jar;.\lib\jdic_stub.jar;.\lib\jhall.jar;.\lib\Library.jar;.\lib\lkm-util.jar;.\lib\lkmc-jni.jar;.\lib\log4j.jar;.\lib\mlibwrapper_jai.jar;.\lib\MobileLauncher.jar;.\lib\MobileSimulator.jar;.\lib\MobileSimulatorHelp.jar;.\lib\OTAEngine.jar;.\lib\OTAEngineHelp.jar;.\lib\OTAMonitor.jar;.\lib\OTAMonitorHelp.jar;.\lib\OTAScenarioBuilder.jar;.\lib\OTAServerAPI.jar;.\lib\pcsc-wrapper-2.0-revision2.jar;.\lib\PictureConvertor.jar;.\lib\ProfileManager.jar;.\lib\RealNetWorkEngine.jar;.\lib\RealNetworkHelp.jar;.\lib\reuse.jar;.\lib\RXTXcomm.jar;.\lib\SCTools.jar;.\lib\servapp-api.jar;.\lib\ServerSimulator.jar;.\lib\ServerSimulatorHelp.jar;.\lib\ServerSimulatorWrapper.jar;.\lib\SimulatorProxy.jar;.\lib\SmsLibrary.jar;.\lib\SmsTools.jar;.\lib\Spy.jar;.\lib\swing-layout.jar;.\lib\swingenhancer.jar;.\lib\timingframework.jar;.\lib\toolsbox.jar;.\lib\xml4j.jar;.\lib\ext\GemplusRemoteServices.jar;.\lib\ext\MSTierApp.jar;.\lib\ext\SimulationChainTierApp.jar;.\lib\ext\SimulationChainService.jar;"></PROPERTY>
+		<!--PROPERTY name="classpathfile" value="./lib/Library.jar"></PROPERTY>
+		<PROPERTY name="classpathfile" value="./lib/OTAMonitor.jar"></PROPERTY-->        
+		<PROPERTY name='java.version' value='1.5' />
+        <PROPERTY name='java.mainclass'
+                  value='com.gemplus.ota.simulationchain.SimulationChainServiceLauncher'/>
+        <PROPERTY name='OTA_MONITOR_PROPERTIES_PATH' value='./conf/2G' />
+        <PROPERTY name='SERVER_SIMULATOR_WORKING_DIRECTORY'
+                  value='./conf/2G/serversimulator' />
+        <PROPERTY name='MOBILE_SIMULATOR_PATH'
+                  value='./conf/2G/mobilesimulator' />
+        <PROPERTY name='SMART_CARD_FWK_PATH'
+                  value='./conf/cardaccess/opencard.properties' />
+        <PROPERTY name='AGENT_PATH'
+                  value='./conf/2G/serversimulator/agents' />
+        <PROPERTY name='MESSAGES_PATH'
+                  value='./conf/2G/serversimulator/messages/Messages.mb' />
+        <PROPERTY name='LOG_PATH' value='SimulationChain2G' />
+
+        <INTEGRATION name='CARDADMIN'>
+        </INTEGRATION>
+
+        <INTEGRATION name='GEMXPLORE_DEVELOPER'>
+            <PROPERTY name='tierappclassdir' value='./lib/ext' />
+        </INTEGRATION>
+      </APPLICATION>
+      <APPLICATION name='MOBILE_SIMULATOR'>
+        <PROPERTY name='label' value='Mobile Simulator' />
+        <PROPERTY name='home' value='%HOME%' />
+        <PROPERTY name='version' value='%VERSION%' />
+        <PROPERTY name='serialnumber' value='%SERIALNUMBER%' />
+        <PROPERTY name='java.version' value='1.5' />
+        <PROPERTY name='java.mainjar' value='./lib/MobileLauncher.jar'/>
+        <PROPERTY name='MOBILE_SIMULATOR_PATH' value='./conf/2G/mobilesimulator' />
+        <PROPERTY name='SMART_CARD_FWK_PATH'
+                  value='./conf/cardaccess/opencard.properties' />
+        <PROPERTY name='LOG_PATH' value='SimulationChain2G' />
+
+        <INTEGRATION name='CARDADMIN'>
+        </INTEGRATION>
+
+        <INTEGRATION name='GEMXPLORE_DEVELOPER'>
+            <PROPERTY name='tierappclassdir' value='./lib/ext' />
+        </INTEGRATION>
+      </APPLICATION>
+
+      <APPLICATION name="OTA_INTERPRETER">
+        <PROPERTY name="label" value="OTA Interpreter"/>
+        <PROPERTY name="home" value='%GEMPLUS_SHARE%/OTAInterpreter'/>
+        <PROPERTY name="version" value='%INTERPRETER_VERSION%'/>
+        <!--PROPERTY name="classpathfile" value="./lib/OTAInterpreter.jar"/-->
+		<PROPERTY name="classpathfile" value=".\lib\cryptix-jce-api.jar;.\lib\Crypto_Provider.jar;.\lib\dom4j.jar;.\lib\GemplusToolsRegistry.jar;.\lib\GemTranslator.jar;.\lib\jaxen.jar;.\lib\jhall.jar;.\lib\Library.jar;.\lib\OTAEngine.jar;.\lib\OTAEngineHelp.jar;.\lib\OTAInterpreter.jar;.\lib\OTAInterpreterHelp.jar;.\lib\ProfileManager.jar;.\lib\reuse.jar;.\lib\SCTools.jar;.\lib\SmsLibrary.jar;.\lib\SmsTools.jar;.\lib\ext\OTAInterpreterTierApp.jar;		"/>
+        <PROPERTY name="java.version" value="1.5"/>
+        <PROPERTY name="java.mainjar" value="./lib/OTAInterpreter.jar"/>
+        <PROPERTY name="java.mainclass" value="com.gemplus.interpreter.InterpreterFrame"/>
+        <PROPERTY name="OTA_INTERPRETER_PROPERTIES_PATH" value="./conf"/>
+        <PROPERTY name="usedby" value="SIMUCHAIN.2G"/> 
+        <INTEGRATION name="CARDADMIN"/>
+        <INTEGRATION name="GEMXPLORE_DEVELOPER">
+            <PROPERTY name="tierappclassdir" value="./lib/ext"/>
+        </INTEGRATION>
+    </APPLICATION>
+
+   </APPLICATIONS>
+
+   <RESOURCES>
+   	<RESOURCE name='TPUDCardTemplates'>
+       <PROPERTY name='path'
+                 value='%GEMPLUS_SHARE%/OTARepository/OtaTemplate/index.txt' />
+     </RESOURCE>
+     <RESOURCE name='OTAProfiles'>
+       <PROPERTY name='path'
+                 value='%GEMPLUS_SHARE%/OTARepository/OtaProfile' />
+     </RESOURCE>
+     <RESOURCE name='ProfileMgrPlugins'>
+       <PROPERTY name='path' value='%GEMPLUS_SHARE%/ProfileMgrPlugins' />      
+    </RESOURCE>
+   </RESOURCES>
+</GemplusToolsRegistry>

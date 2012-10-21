@@ -1,0 +1,11 @@
+# name of the card profile within the repository
+Name=GemXplore Generations Flexible
+
+# name of the protocol profile associated to the card
+Protocol=GemXplore Generations Flexible_protocol
+
+#name of the algorithm bundle associated to the card
+Algorithm.Bundle=GemXplore Generations Flexible_algorithm
+
+#name of the command set associated to the card
+Command.Set=GxxV3

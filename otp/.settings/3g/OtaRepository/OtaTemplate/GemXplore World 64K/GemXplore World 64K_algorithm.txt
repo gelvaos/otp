@@ -1,0 +1,21 @@
+# name of the algorithm bundle within the repository
+Name=GemXplore World 64K_algorithm
+
+# name of the protocol formatter type
+Type=03.48
+
+# algorithm masks declaration
+Algo1.Name=XOR4
+Algo1.RCmask=1 1 1 1
+
+Algo2.Name=CRC32
+Algo2.RCmask=1 1 1 1
+
+Algo3.Name=XOR8
+Algo3.CCmask=1 1 1 1 1 1 1 1
+
+Algo4.Name=DES
+Algo4.CCmask=1 1 1 1 1 1 1 1
+
+Algo5.Name=TripleDES
+Algo5.CCmask=1 1 1 1 1 1 1 1
